@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(183, 219, 199);
+}
+
+canvas {
+    width: 100%;
+    height: 130%;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 25%;
+    height: 90%;
+    /* Removed background-size: cover; */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+    height: 70%;
+    background-color: white;
+    /* Removed box-shadow */
+}
+
+a {
+    text-decoration: none;
+    color: rgb(7, 137, 65);
+}
+
+
+
+input {
+    border: 0px;
+    border-bottom: 1px solid black;
+    width: 60%;
+}
+
+.field {
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+input:hover,
+input:focus {
+    outline: none;
+}
+
+.commonElementStyle {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    align-items: center;
+}
+
+.button {
+    background-color: rgb(7, 137, 65);
+    color: white;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5%;
+    width: 15rem;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .subContainer {
+        width: 80%;
+    }
+
+    .wrapper {
+        width: 80%;
+    }
+
+    input {
+        width: 80%;
+    }
+}

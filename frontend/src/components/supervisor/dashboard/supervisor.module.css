@@ -1,0 +1,189 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure full viewport height */
+    width: 100vw;
+}
+
+.menuContainer {
+    background-color: rgb(94, 192, 146);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 10%;
+    /* Responsive width */
+    align-items: center;
+}
+
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.header_ {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.projectListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* Enable card wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    min-height: 100vh;
+    /* Account for potential viewport height */
+    width: 100%;
+}
+
+.projectControl {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.headerProject {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    width: 15%;
+    /* Responsive width with margins */
+    height: 20%;
+    margin: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+nav {
+    flex: 2;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 1000;
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+.controlBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .menuContainer {
+        width: 20%;
+        /* Increase menu width on smaller screens */
+    }
+
+    .projectListContainer {
+        flex-direction: column;
+        /* Stack cards vertically */
+    }
+
+    .card {
+        width: 100%;
+        /* Cards take full width on smaller screens */
+    }
+}

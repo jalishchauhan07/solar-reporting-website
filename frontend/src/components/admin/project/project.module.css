@@ -1,0 +1,178 @@
+/* Container Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Use vieport height for full-screen */
+    width: 100%;
+    /* Use viewport width for full-screen */
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* Allow cards to wrap onto multiple lines */
+    width: 100%;
+    height: 100vh;
+    /* Fill full container width */
+    margin: 2rem;
+    /* Add spacing around the `subContainer` */
+}
+
+/* Card Styles */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    /* White background for cards */
+    border-radius: 0.5rem;
+    /* Consistent and slightly rounded corners */
+    padding: 0.5rem;
+    /* Add some padding within cards */
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    margin: 1rem;
+    /* Consistent margin between cards */
+    flex: 0 0 auto;
+    width: 15%;
+    height: 25%;
+    /* Distribute cards evenly in available space */
+    min-width: 100px;
+    /* Set minimum card width for responsiveness */
+}
+
+/* Progress Bar Styles */
+.progressBar {
+    width: 100%;
+    height: 0.25rem;
+    /* Thinner progress bar */
+    border-radius: 0.25rem;
+    background-color: #6d6c6c;
+    /* Green progress bar */
+}
+
+
+.subProgressBar {
+    width: 50%;
+    height: 0.25rem;
+    /* Thinner progress bar */
+    border-radius: 0.25rem;
+    background-color: #000;
+}
+
+/* Content Styles */
+.content {
+    flex: 1 0 auto;
+    /* Allow content to fill available space */
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    position: fixed;
+    top: 90%;
+    right: 5%;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    /* Smaller footer height */
+
+    /* Same light background as the page */
+}
+
+.btn {
+    width: 8rem;
+    background-color: green;
+    height: 3.5rem;
+    position: absolute;
+    right: 20px;
+    /* Or other desired position */
+    bottom: 20px;
+}
+
+.controlBtn {
+    display: flex;
+    width: 100%;
+    margin: 0.5rem 0rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Transparent background overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_is_active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 80vw;
+    position: absolute;
+    /* Maximum modal width for responsiveness */
+    max-height: 90vh;
+    /* Maximum modal height for responsiveness */
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    /* Slightly stronger shadow */
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 768px) {
+    .card {
+        flex-direction: row;
+        /* Change card layout for smaller screens */
+    }
+
+    .modal_is_active {
+        width: 100vw;
+
+        /* Adjust modal width for narrower screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card {
+        flex-direction: column;
+        /* Revert layout for very small screens */
+    }
+
+    .modal_is_active {
+        max-width: 100%;
+        /* Full-width modal for very small screens */
+    }
+}
+
+/* Additional Styles (Optional) */
+button {
+    border-radius: 10%;
+    border: none;
+    /* Remove outline */
+    background-color: #3b7262;
+    /* Same green as progress bar */
+    color: #fff;
+    /* White text for better contrast */
+    padding: 0.5rem 1rem;
+    /* Adjust padding for buttons */
+    cursor: pointer;
+}
+
+.closeBtn {
+    /* Style the close button as desired */
+}
